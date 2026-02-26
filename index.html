@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Habit Tracker App</title><!-- PWA Support --><link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f172a"><!-- Styles --><link rel="stylesheet" href="style.css"><!-- Chart library --><script src="https://cdn.jsdelivr.net/npm/chart.js"></script></head><body><h1 id="title">Habit Tracker</h1><!-- HABIT SECTION --><div class="card">
+    <h3>Today's Habits</h3><div class="grid">
+    <button class="habit" onclick="toggle(0)">Deep Work</button>
+    <button class="habit" onclick="toggle(1)">Study</button>
+    <button class="habit" onclick="toggle(2)">Exercise</button>
+    <button class="habit" onclick="toggle(3)">Reading</button>
+    <button class="habit" onclick="toggle(4)">Skill Building</button>
+    <button class="habit" onclick="toggle(5)">No Scrolling</button>
+    <button class="habit" onclick="toggle(6)">Sleep Target</button>
+    <button class="habit" onclick="toggle(7)">Daily Planning</button>
+</div>
+
+<div id="todayScore">Score: 0%</div>
+<button onclick="saveDay()">Save Today</button>
+
+</div><!-- DAILY CHART --><div class="card">
+    <h3>Daily Performance</h3>
+    <canvas id="dailyChart"></canvas>
+</div><!-- WEEKLY CHART --><div class="card">
+    <h3>Weekly Performance</h3>
+    <canvas id="weekChart"></canvas>
+</div><!-- MONTHLY CHART --><div class="card">
+    <h3>Monthly Performance</h3>
+    <canvas id="monthChart"></canvas>
+</div><!-- MAIN SCRIPT --><script src="app.js"></script></body>
+</html>
